@@ -1,0 +1,43 @@
+.carousel-wrapper{
+    position: relative;
+}
+
+.carousel-wrapper .arrow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 60px;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.carousel-wrapper .arrow:hover{
+    text-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px black;
+}
+
+.carousel-wrapper div + .arrow{
+    right: 0;
+}
+
+.carousel > div:not(.selected){
+    display: none;
+}
+
+.carousel > div > div + div{
+    position: absolute;
+    top: 0;
+    margin-left: 30px;
+    text-shadow: 1px 1px 3px black;
+    color: white;
+}
+
+.carousel picture{
+    display: flex;
+}
