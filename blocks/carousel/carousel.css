@@ -16,6 +16,7 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    z-index:1;
 }
 .carousel-wrapper .arrow:hover{
     text-shadow: 1px 1px 10px black;
@@ -26,8 +27,17 @@
     right: 0;
 }
 
+.carousel > div{
+    -webkit-transition: opacity .6s ease-in-out;
+    -moz-transition: opacity .6s ease-in-out;
+    -o-transition: opacity .6s ease-in-out;
+    transition: opacity .6s ease-in-out;
+}
+
 .carousel > div:not(.selected){
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
 }
 
 .carousel > div > div + div{
